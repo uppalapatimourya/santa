@@ -43,6 +43,13 @@
             font-size: 1.2rem;
         }
 
+        input[type="checkbox"] {
+            transform: scale(1.5);
+            /* Adjust the size */
+            margin-right: 10px;
+            /* Optional spacing */
+        }
+
         button {
             font-size: 1.2rem;
             color: white;
@@ -146,7 +153,7 @@
                     disabled.push(selectedGift.value);
                     selectedGift.disabled = true;
                     selectedGift.checked = false;
-                    popupMessage.innerHTML = `${selectedGift.value} is out of stock! Choose another gift.<br> Anyway it does't suits you`;
+                    popupMessage.innerHTML = `${selectedGift.value} is out of stock! Choose another gift.<br> Anyway you don't need them`;
                     proceedButton.style.display = 'none';
                     popup.style.display = 'block';
                 }
@@ -193,16 +200,13 @@
         <form onsubmit="handleSubmit(event)">
             <label>
                 <input type="checkbox" name="gift" value="Reindeer Antlers"> A pair of sparkly reindeer headphones
-                (perfect
-                for Zoom meetings!)
             </label>
             <label>
                 <input type="checkbox" name="gift" value="Chocolate Fountain"> A portable chocolate fountain
 
             </label>
             <label>
-                <input type="checkbox" name="gift" value="Ugly Sweater"> An ultra-ugly Christmas sweater (it's SO bad,
-                it's good!)
+                <input type="checkbox" name="gift" value="Ugly Sweater"> An ultra-ugly Christmas sweater
             </label>
             <label>
                 <input type="checkbox" name="gift" value="Lifetime Cookies"> A lifetime supply of Santa's secret cookies
